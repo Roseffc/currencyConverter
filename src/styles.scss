@@ -4,12 +4,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: $v-colorGrayPrimary;
 }
 
 .container {
   padding: 0 65px;
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .bgColor {
@@ -19,7 +20,7 @@ body {
   }
 
   &--grayPrimary {
-    background-color: $v-colorGrayPrimary
+    background-color: $v-colorGrayPrimary;
   }
 
   &--graySecondary {
@@ -55,5 +56,50 @@ body {
   }
 
 }
+
+.text {
+  &--center {
+    text-align: center;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content {
+
+  &--start {
+    justify-content: start;
+  }
+
+  &--end {
+    justify-content: end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--around {
+    justify-content: space-around;
+  }
+
+  &--between {
+    justify-content: space-between;
+  }
+}
+
+.align-items {
+  &--center {
+    align-items: center;
+  }
+}
+
+
 
 
