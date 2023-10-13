@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/reset.scss';
+@import './app/styles/colors.scss';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  padding: 0 65px;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.bgColor {
+
+  &--white {
+    background-color: $v-colorWhite;
+  }
+
+  &--grayPrimary {
+    background-color: $v-colorGrayPrimary
+  }
+
+  &--graySecondary {
+    background-color: $v-colorGraySecondary;
+  }
+
+  &--graytertiary {
+    background-color: $v-colorGraytertiary;
+  }
+
+}
+
+.textColor {
+
+  &--basic {
+    background-color: $v-colorTextBasic;
+  }
+
+  &--secondary {
+    background-color: $v-colorTextSecondary;
+  }
+
+  &--green {
+    background-color: $v-colorTextGreen;
+  }
+
+  &--blue {
+    background-color: $v-colorTextBlue;
+  }
+
+  &--red {
+    background-color: $v-colorTextRed;
+  }
+
+}
+
+
