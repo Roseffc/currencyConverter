@@ -1,0 +1,25 @@
+.home {
+  gap: 94px;
+
+  @media (max-width: 1024px) {
+    gap: 37px;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+
+  &__body {
+    min-width: 26.875rem;
+  }
+
+  &__value {
+    height: 12.5rem;
+  }
+
+}
+
+app-card {
+  flex: 1;
+  max-width: 28.875rem;
+}

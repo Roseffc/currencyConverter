@@ -1,5 +1,11 @@
-<section >
-  <app-card [title]="'Dólar Canadense'">
-    <app-status-currency [coin]="6"></app-status-currency>
+<section class="d-flex home justify-content--around">
+  <app-card [title]="getCurrencyName(item.value)" *ngFor="let item of currencyQuote | keyvalue">
+    <div class="card__body">
+      <div class="card__value d-flex justify-content--center align-items--center">
+        <app-status-currency [coin]="getBidValue(item.value)"></app-status-currency>
+      </div>
+      <div class="card__footer">
+      </div>
+    </div>
   </app-card>
 </section>
