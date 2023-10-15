@@ -1,0 +1,3 @@
+<div class="font-size--xl font-weight--500">
+  <p [ngClass]="{'text-color--red': coin <= 1, 'text-color--green': coin > 1 && coin <= 5, 'text-color--blue': coin > 5 }" a-ng>{{coin | currency:'BRL':'symbol':'1.2-2' }}</p>
+</div>

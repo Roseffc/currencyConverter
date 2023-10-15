@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './pages/home/home.module';
 import { HeaderComponent } from './core/components/header/header.component';
 
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -17,7 +22,7 @@ import { HeaderComponent } from './core/components/header/header.component';
     AppRoutingModule,
     HomeModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
