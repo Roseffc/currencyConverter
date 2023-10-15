@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 }
 
-.bgColor {
+.bg-color {
 
   &--white {
     background-color: $v-colorWhite;
@@ -33,7 +33,7 @@ body {
 
 }
 
-.textColor {
+.text-color {
 
   &--basic {
     color: $v-colorTextBasic;
