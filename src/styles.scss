@@ -139,3 +139,24 @@ body {
   }
 
 }
+
+.btn {
+  color: #717171;
+  width: 100%;
+  max-width: 173px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  padding: 18px 28px;
+  border-color: transparent;
+  font-weight: 600;
+  transition: color .15s ease-in-out;
+
+  &:hover {
+    background-color: #f9f4f4;
+  }
+}

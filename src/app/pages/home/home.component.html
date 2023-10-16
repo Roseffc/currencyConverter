@@ -1,12 +1,20 @@
 <section class="d-flex home justify-content--around">
   <app-card [title]="getCurrencyName(item.value)" *ngFor="let item of currencyQuote | keyvalue">
     <div class="card__body">
-      <div class="card__value d-flex justify-content--center align-items--center">
-        <app-status-currency [coin]="getBidValue(item.value)"></app-status-currency>
+      <div *ngIf="!errorRequest && loading" class="loading d-flex justify-content--center align-items--center">
+        <app-loading></app-loading>
       </div>
-      <div class="card__footer">
-        <app-currency-variation [percentageValue]="getPorcentageValue(item.value)"
-          [timer]="getTimer(item.value)"></app-currency-variation>
+      <div *ngIf="!errorRequest && !loading">
+        <div class="card__value d-flex justify-content--center align-items--center">
+          <app-status-currency [coin]="getBidValue(item.value)"></app-status-currency>
+        </div>
+        <div class="card__footer">
+          <app-currency-variation [percentageValue]="getPorcentageValue(item.value)"
+            [timer]="getTimer(item.value)"></app-currency-variation>
+        </div>
+      </div>
+      <div class="errorFeedack d-flex justify-content--center align-items--center" *ngIf="errorRequest">
+        <app-feedback-error></app-feedback-error>
       </div>
     </div>
   </app-card>

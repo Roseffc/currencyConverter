@@ -6,6 +6,8 @@ import { StatusCurrencyComponent } from 'src/app/shared/components/status-curren
 import { CurrencyQuoteService } from 'src/app/services/currency-quote.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrencyVariationComponent } from 'src/app/shared/components/currency-variation/currency-variation.component';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
+import { FeedbackErrorComponent } from 'src/app/shared/components/feedback-error/feedback-error.component';
 
 @NgModule({
   imports: [
@@ -13,10 +15,13 @@ import { CurrencyVariationComponent } from 'src/app/shared/components/currency-v
     HttpClientModule
   ],
 
-  declarations: [HomeComponent,
+  declarations: [
+    HomeComponent,
     CardComponent,
     StatusCurrencyComponent,
-    CurrencyVariationComponent
+    CurrencyVariationComponent,
+    LoadingComponent,
+    FeedbackErrorComponent
   ],
   providers:[CurrencyQuoteService]
 })

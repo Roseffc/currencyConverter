@@ -10,20 +10,48 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   currencyCodes = ['CAD-BRL', 'ARS-BRL', 'GBP-BRL'];
   currencyQuote!: CurrencyQuoteType;
+  loading: boolean=false;
+  errorRequest:boolean= false;
 
   constructor(private currencyQuoteService: CurrencyQuoteService) {}
 
   ngOnInit() {
+    this.currencyQuoteService.loading$.subscribe((value) => {
+      console.log('loading', value)
+      this.loading = value;
+    });
     this.getCurrencyQuote();
+    this.getUpdateCurrencyQuote();
   }
 
   getCurrencyQuote() {
     this.currencyQuoteService
       .getCurrencyQuote(this.currencyCodes)
-      .subscribe((result) => {
-        this.currencyQuote = result;
-        console.log(result);
-      });
+      .subscribe({
+        next: (result:any) => {
+          this.currencyQuote = result;
+          this.currencyQuoteService.loading$.next(false)
+        },
+        error: (error) => {
+          console.log('Error Servidor: ', error);
+          this.errorRequest = true;
+        },
+       })
+  }
+
+  getUpdateCurrencyQuote() {
+    this.currencyQuoteService
+    .getUpdateCurrencyQuote(this.currencyCodes)
+    .subscribe({
+      next: (result) => {
+      this.currencyQuote = result;
+      this.currencyQuoteService.loading$.next(false)
+      },
+      error: (error) => {
+        console.log('Error Servidor: ', error);
+        this.errorRequest = true;
+      },
+    });
   }
 
   getBidValue(item: any) {
