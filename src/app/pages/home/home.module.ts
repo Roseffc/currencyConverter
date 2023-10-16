@@ -5,6 +5,7 @@ import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { StatusCurrencyComponent } from 'src/app/shared/components/status-currency/status-currency.component';
 import { CurrencyQuoteService } from 'src/app/services/currency-quote.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyVariationComponent } from 'src/app/shared/components/currency-variation/currency-variation.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 
   declarations: [HomeComponent,
     CardComponent,
-    StatusCurrencyComponent
+    StatusCurrencyComponent,
+    CurrencyVariationComponent
   ],
   providers:[CurrencyQuoteService]
 })

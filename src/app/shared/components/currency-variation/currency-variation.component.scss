@@ -1,0 +1,21 @@
+@import '../../../styles/colors.scss';
+
+.variation {
+  height: 6.675rem;
+  border-top: solid 1px $v-colorGray;
+
+  &__percentage {
+    width: 50%;
+    flex-direction: column;
+    border-right: solid 1px $v-colorGray;
+  }
+
+  &__date {
+    width: 50%;
+    flex-direction: column;
+  }
+}
+
+.m-b{
+  margin-bottom: 17px;
+}

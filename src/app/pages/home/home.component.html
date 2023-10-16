@@ -5,6 +5,8 @@
         <app-status-currency [coin]="getBidValue(item.value)"></app-status-currency>
       </div>
       <div class="card__footer">
+        <app-currency-variation [percentageValue]="getPorcentageValue(item.value)"
+          [timer]="getTimer(item.value)"></app-currency-variation>
       </div>
     </div>
   </app-card>

@@ -33,4 +33,12 @@ export class HomeComponent implements OnInit {
   getCurrencyName(item: any) {
     return item.name.split('/')[0];
   }
+
+  getPorcentageValue(item: any) {
+    return item.pctChange;
+  }
+
+  getTimer(item: any) {
+    return item.timestamp;
+  }
 }
