@@ -1,4 +1,4 @@
-<section class="d-flex home justify-content--around">
+<section class="d-flex home justify-content--center">
   <app-card [title]="getCurrencyName(item.value)" *ngFor="let item of currencyQuote | keyvalue">
     <div class="card__body">
       <div *ngIf="!errorRequest && loading" class="loading d-flex justify-content--center align-items--center">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="errorFeedack d-flex justify-content--center align-items--center" *ngIf="errorRequest">
-        <app-feedback-error></app-feedback-error>
+        <app-feedback-error (onClick)="updateRequest()"></app-feedback-error>
       </div>
     </div>
   </app-card>

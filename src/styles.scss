@@ -141,7 +141,7 @@ body {
 }
 
 .btn {
-  color: #717171;
+  color: $v-colorTextBasic;
   width: 100%;
   max-width: 173px;
   font-size: 18px;
@@ -150,13 +150,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F4F4F4;
+  background-color: $v-colorGraytertiary;
   padding: 18px 28px;
   border-color: transparent;
   font-weight: 600;
   transition: color .15s ease-in-out;
 
   &:hover {
-    background-color: #f9f4f4;
+    background-color: $v-colorhover;
   }
 }

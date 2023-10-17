@@ -69,4 +69,8 @@ export class HomeComponent implements OnInit {
   getTimer(item: any) {
     return item.timestamp;
   }
+
+  updateRequest() {
+    this.getCurrencyQuote();
+  }
 }
