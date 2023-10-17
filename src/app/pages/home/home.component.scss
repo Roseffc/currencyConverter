@@ -1,5 +1,5 @@
 .home {
-  gap: 94px;
+  gap: 95px;
 
   @media (max-width: 1024px) {
     gap: 37px;
@@ -10,18 +10,18 @@
 .card {
 
   &__body {
-    min-width: 26.875rem;
+    min-width: 19.75rem;
   }
 
   &__value {
-    height: 12.5rem;
+    height: 12.46875rem;
   }
 
 }
 
 app-card {
   flex: 1;
-  max-width: 28.875rem;
+  max-width: 26.875rem;
 }
 
 .loading, .errorFeedack {
