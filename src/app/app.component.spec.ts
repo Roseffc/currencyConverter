@@ -1,11 +1,13 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    declarations: [AppComponent, HeaderComponent]
   }));
 
   it('should create the app', () => {
@@ -20,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('currency-converter');
   });
 
-  it('should render title', () => {
+  it('should render header with svg logotipo', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('currency-converter app is running!');
+    expect(compiled.querySelector('header svg')).toBeTruthy();
   });
 });
