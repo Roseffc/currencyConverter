@@ -1,27 +1,56 @@
-# CurrencyConverter
+## CurrencyConverter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+Sistema para conversão de três moedas para real brasilleiro(BRL).
 
-## Development server
+Funcionalidades: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+- Mostra a quantia equivalente de uma unidade de cada moeda abaixo em Real Brasileiro (BRL);
+- Exibe a variação em porcentagem;
+- Exibe a hora da atualização;
+- Os valores menores ou igual a R$ 1,00 são exibidos em vermelho;
+- Os valores maiores que R$ 1,00 e menores ou igual a R$5,00 são exibidos em verde;
+- Os valores maiores que R$ 5,00 são exibidos em azul;
+- As informações são atualizadas automaticamente a cada 3 minutos;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Tecnologias utilizadas 
+- Angular@16.2.3
+- TypeScript
+- RXJS
+- SASS
 
-## Build
+### Rodar projeto 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Passo 1
+Para rodar o projeto em localhost, seguir os passos abaixo:
 
-## Running unit tests
+1. `git clone https://github.com/Roseffc/currencyConverter.git`
+2. `cd currencyConverter`
+3. `npm install`
+4. `ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Passo 2 
 
-## Running end-to-end tests
+2.1 Abrir o browser com esse link http://localhost:4200/home
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Interfaces
 
-## Further help
+| Desktop | 
+|:-------------:|
+|<img width="800" alt="Desktop" src="src/assets/img/desktop.png">|
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Feedback Error | 
+|:-------------:|
+|<img width="800" alt="Desktop" src="src/assets/img/feedback-error.png">|
+
+| Mobile | 
+|:-------------:|
+|<img width="800" alt="Desktop" src="src/assets/img/mobile.png">|
+
+
+
+### Referências:
+
+- [Angular CLI Overview and Command Reference](https://angular.io/cli)
+- [API awesome](https://docs.awesomeapi.com.br/api-de-moedas)
+
