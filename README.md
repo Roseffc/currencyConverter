@@ -33,6 +33,9 @@ Para rodar o projeto em localhost, seguir os passos abaixo:
 
 2.1 Abrir o browser com esse link http://localhost:4200/home
 
+### Demo do Sistema
+- [Currency Converter] (https://currency-converter-sooty-mu.vercel.app/home)
+
 ### Interfaces
 
 | Desktop | 
